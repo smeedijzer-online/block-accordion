@@ -34,7 +34,7 @@ export default function Save(props) {
 	const parentId = '#block-' + parentBlockClientId;
 
 	const blockProps = useBlockProps.save( {
-		className: 'accordion'
+		className: 'accordion-item'
 	} );
 
 	return (
