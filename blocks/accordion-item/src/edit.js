@@ -52,7 +52,7 @@ export default function Edit(props) {
 		className: 'accordion-item',
 	});
 
-	const ALLOWED_BLOCKS = ['core/paragraph', 'core/list', 'core/button', 'core/buttons'];
+	const ALLOWED_BLOCKS = ['core/paragraph', 'core/list', 'core/button', 'core/buttons', 'core/html'];
 	//const noInnerBlocks = wp.data.select( 'core/block-editor' ).getBlocks(blockId).length === 0;
 
 	return (
