@@ -35,8 +35,6 @@ export default function Edit(props) {
 		setAttributes,
 	} = props;
 
-	console.log('blockId: ' + blockId);
-
 	if ( ! blockId ) {
 		setAttributes( { blockId: clientId } );
 	}

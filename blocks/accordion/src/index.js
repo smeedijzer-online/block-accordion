@@ -30,9 +30,9 @@ import metadata from './../block.json';
 // https://github.com/10up/maps-block-apple/blob/develop/src/index.js
 registerBlockType( metadata, {
 	icon: BlockIcon,
-	// attributes: {
-	// 	...metadata.attributes,
-	// },
+	attributes: {
+		...metadata.attributes,
+	},
 	edit: Edit,
 	save: Save,
 } );
