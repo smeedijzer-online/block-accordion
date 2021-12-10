@@ -1,0 +1,28 @@
+{
+  "apiVersion": 2,
+  "name": "smeedijzer/accordion",
+  "version": "0.1.0",
+  "title": "Accordion block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "accordion",
+  "textdomain": "smeedijzer-block-accordion",
+  "keywords": [
+	"bootstrap",
+	"component"
+  ],
+  "example": {},
+  "supports": {
+	"anchor": true,
+	"align": false,
+	"html": false
+  },
+  "attributes": {
+	"blockId": {
+	  "type": "string"
+	}
+  },
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}

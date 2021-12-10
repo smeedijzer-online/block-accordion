@@ -1,0 +1,6 @@
+{
+  "name": "smeedijzer-online/block-accordion",
+  "description": "Add individual accordion items within an accordion.",
+  "type": "wordpress-plugin",
+  "version": "0.1.0"
+}
