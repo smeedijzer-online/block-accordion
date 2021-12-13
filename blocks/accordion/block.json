@@ -15,12 +15,16 @@
   "supports": {
 	"anchor": true,
 	"align": false,
-	"html": false
+	"html": false,
+	"reusable": false
   },
   "attributes": {
 	"blockId": {
 	  "type": "string"
 	}
+  },
+  "providesContext": {
+	"accordion/blockId": "blockId"
   },
   "editorScript": "file:./build/index.js",
   "editorStyle": "file:./build/index.css",

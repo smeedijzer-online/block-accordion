@@ -28,11 +28,10 @@ export default function Save(props) {
 
 	const blockProps = useBlockProps.save( {
 		className: 'accordion',
-		id: 'block-' + blockId,
 	} );
 
 	return (
-		<div { ...blockProps }>
+		<div { ...blockProps }  id={ `block-${ blockId }` }>
 			<InnerBlocks.Content />
 		</div>
 	);

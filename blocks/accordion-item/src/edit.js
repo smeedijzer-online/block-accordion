@@ -32,20 +32,25 @@ import './editor.scss';
 export default function Edit(props) {
 	const {
 		attributes: {
+			parentClientId,
 			innerBlockId,
 			title
 		},
 		clientId,
 		setAttributes,
+		context
 	} = props;
 
 	if (!innerBlockId) {
 		setAttributes({innerBlockId: clientId});
 	}
+	setAttributes({parentClientId: context['accordion/blockId']});
+
+
 	const id = 'block-' + innerBlockId;
 	const target = '#block-' + innerBlockId;
 	const heading = 'heading-' + innerBlockId;
-	const parentBlockClientId = wp.data.select('core/block-editor').getBlockParents(innerBlockId)[0];
+	const parentBlockClientId = wp.data.select('core/block-editor').getBlockParents(clientId)[0];
 	const parentId = '#block-' + parentBlockClientId;
 
 	const blockProps = useBlockProps({

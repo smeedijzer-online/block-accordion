@@ -22,6 +22,7 @@ import {InnerBlocks, RichText, useBlockProps} from '@wordpress/block-editor';
 export default function Save(props) {
 	const {
 		attributes: {
+			parentClientId,
 			innerBlockId,
 			title
 		},
@@ -30,8 +31,11 @@ export default function Save(props) {
 	const id = 'block-' + innerBlockId;
 	const target = '#block-' + innerBlockId;
 	const heading = 'heading-' + innerBlockId;
-	const parentBlockClientId = wp.data.select('core/block-editor').getBlockParents(innerBlockId)[0];
+	const parentBlockClientId = parentClientId; //wp.data.select('core/block-editor').getBlockParents(innerBlockId)[0];
 	const parentId = '#block-' + parentBlockClientId;
+
+	console.log('clientId (Save): ' + innerBlockId);
+	console.log('parentBlockClientId (Save): ' + parentClientId);
 
 	const blockProps = useBlockProps.save( {
 		className: 'accordion-item'
@@ -45,7 +49,7 @@ export default function Save(props) {
 				</button>
 			</h2>
 
-			<div id={id} className="accordion-collapse collapse" aria-labelledby={heading} data-parent={parentId}>
+			<div id={id} className="accordion-collapse collapse" aria-labelledby={heading} data-bs-parent={parentId}>
 				<div className="accordion-body">
 					<InnerBlocks.Content/>
 				</div>

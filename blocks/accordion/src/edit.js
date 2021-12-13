@@ -54,6 +54,8 @@ export default function Edit(props) {
 					[ 'smeedijzer/accordion-item', {} ],
 				] }
 				templateLock={ false }
+				orientation="vertical"
+				renderAppender={ InnerBlocks.ButtonBlockAppender }
 			/>
 		</div>
 	);

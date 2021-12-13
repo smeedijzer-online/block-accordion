@@ -28,9 +28,9 @@ import metadata from './../block.json';
  */
 registerBlockType( metadata, {
 	icon: BlockIcon,
-	attributes: {
-		...metadata.attributes,
-	},
+	// attributes: {
+	// 	...metadata.attributes,
+	// },
 	edit: Edit,
 	save: Save,
 } );
