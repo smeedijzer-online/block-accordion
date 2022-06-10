@@ -62,8 +62,8 @@ export default function Edit(props) {
 
 	return (
 		<div { ...blockProps }>
-			<h2 className="accordion-header" id={heading}>
-				<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={target} aria-expanded="false" aria-pressed="false" aria-controls={id}>
+			<h3 className="accordion-header" id={heading}>
+				<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={target} aria-expanded="false" aria-controls={id}>
 					<RichText
 						value={title} // Any existing content, either from the database or an attribute default
 						allowedFormats={['core/bold', 'core/italic', 'core/link']} // Allow the content to be made bold or italic, but do not allow other formatting options
@@ -71,7 +71,7 @@ export default function Edit(props) {
 						placeholder={__('Panel title...', 'gutenberg-faq')} // Display this text before any content has been added by the user
 					/>
 				</button>
-			</h2>
+			</h3>
 
 			<div id={id} className="accordion-collapse collapse show" aria-labelledby={heading} data-bs-parent={parentId}>
 				<div className="accordion-body">
@@ -113,7 +113,7 @@ export default function Edit(props) {
 // 		return (
 // 			<Fragment>
 // 				<RichText
-// 					tagName="h2"
+// 					tagName="h3"
 // 					className="accordion-header"
 // 					placeholder={ __( 'Write a accordion title…' ) }
 // 					value={ title }
