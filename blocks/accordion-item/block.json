@@ -19,7 +19,7 @@
 	"reusable": false
   },
   "parent": [
-	"wp-bootstrap-blocks/accordion"
+	"smeedijzer/accordion"
   ],
   "attributes": {
 	"clientId": {
